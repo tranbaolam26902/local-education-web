@@ -241,7 +241,7 @@ export default function FileSection() {
                     type='file'
                     hidden
                     multiple
-                    accept='image/*, video/*, audio/*'
+                    accept='image/*, video/*, audio/*, .docx, .pdf, .xlsx'
                     onChange={handleUploadFile}
                 />
             </section>
@@ -306,8 +306,9 @@ export default function FileSection() {
                             <button
                                 type='button'
                                 title='Chuyển chế độ chọn'
-                                className={`flex items-center justify-center p-2 h-full aspect-square bg-white border border-gray-400 rounded shadow-inner hover:bg-gray-100 dark:bg-dark dark:hover:bg-white/30${fileManagement.multiSelectMode ? ' outline outline-2 outline-blue-400' : ''
-                                    }`}
+                                className={`flex items-center justify-center p-2 h-full aspect-square bg-white border border-gray-400 rounded shadow-inner hover:bg-gray-100 dark:bg-dark dark:hover:bg-white/30${
+                                    fileManagement.multiSelectMode ? ' outline outline-2 outline-blue-400' : ''
+                                }`}
                                 onClick={handleToggleMultiSelectMode}
                             >
                                 <Unicons.UilCheckSquare size='24' />
